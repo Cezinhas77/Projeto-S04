@@ -31,9 +31,6 @@
 linhas = int(input(f"Digite o tamanho da matriz (linhas): "))
 colunas = int(input(f"Digite o tamanho da matriz (colunas): "))
 
-
-
-
 matriz = []
 for i in range(linhas):
     linha = []
@@ -76,6 +73,7 @@ if opcao == 1:
 if opcao == 2:
 
     print('\nVocê quer saber o maior e o menor elemento da matriz')
+
     maior_i = 0
     maior_j = 0
 
@@ -97,4 +95,19 @@ if opcao == 2:
 
 
 
-#if opcao == 3:
+if opcao == 3:
+    
+    elemento = int(input('\nQual elemento você procura? '))
+    print()
+
+    contador_elemento = 0
+    for i in range (linhas):
+        elementos = []
+        for j in range (colunas):
+            if matriz[i][j] == elemento:
+                contador_elemento += 1
+                print(f'Elemento encontrado na posição: [{i}][{j}]')
+                
+
+    if contador_elemento == 0:
+        print('Elemento não encontrado')
