@@ -47,11 +47,18 @@ print()
 
 escolha = int(input(f"Digite o número da função desejada: "))
 
-# if escolha == 1:
-#     soma = 0
-#     for i in range (len(linha)):
-#         soma = linha[i] + linha[j]
-#     print(soma)
+if escolha == 1:
+    soma = 0
+    for i in range (len(linha)):
+        soma = linha[i] + linha[j]
+    print(soma)
+
+if escolha == 5:
+    x = int(input("Digite o fator escalar:"))
+    for linha in matriz:
+        for j in range(len(linha)):
+            print(linha[j] * x, end=' ')
+
 
 if escolha == 6:
     matriz2 = []
