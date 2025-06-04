@@ -1,32 +1,4 @@
-# #Faça um programa para manipulação de matriz. O programa deve ter um menu principal onde o usuário deverá escolher o que será executado.
-
-
-# #Menu principal:
-
-
 # Preencher a matriz. (Nessa opção o usuário deverá definir o tamanho da matriz e a popular.
-# Exibir a matriz formatada na tela (desing de matriz, linha x coluna).
-# Calcular e mostrar a soma de todos os elementos da matriz;
-# Calcular e mostrar o maior e o menor elemento da matriz, e também suas respectivas posições.
-# Procurar por um elemento na Matriz. Se encontrar, retornar a posição do mesmo. Caso exista mais de um elemento igual, mostrar as posições de todos.
-# Calcular e exibir a matriz transposta (Trocar linhas por colunas). Para a transposição da matriz, crie uma nova matriz e reorganize os elementos.
-# Multiplicar a matriz por um fator escalar. - Multiplique todos os elementos da matriz por esse escalar e mostrar a matriz depois.
-# Multiplicação entre duas matrizes. Caso o usuário escolha esse opção, ele deverá popular a segunda matriz e o programa realizar a multiplicação entre a primeira e a segunda matriz. Verificar se é possível realizar a operação.
-# Dicas:
-
-
-# Utilize laços de repetição (for ou while) para percorrer a matriz.
-# Para a transposição da matriz, crie uma nova matriz e reorganize os elementos.
-# Teste diferentes entradas para validar seu programa.
-# O programa deve manipular os elementos da matriz somente por índices.
-# Observações:
-# Pode usar o comando append() para adicionar os valores na Matriz.
-# Os elementos da Matriz devem ser acessados através do seus respectivos índices.
-
-
-# Modelo matemático da multiplicação de matrizes
-
-
 
 linhas = int(input(f"Digite o tamanho da matriz (linhas): "))
 colunas = int(input(f"Digite o tamanho da matriz (colunas): "))
@@ -39,11 +11,13 @@ for i in range(linhas):
         linha.append(valor)
     matriz.append(linha)
 
+# Exibir a matriz formatada na tela (desing de matriz, linha x coluna).
 
 print('Matriz:')
 for linha in matriz:
     print(linha)
 
+# #Menu principal:
 
 print('Escolha o que será executado: ')
 print()
@@ -57,6 +31,7 @@ print('(6) - Multiplicação entre duas matrizes')
 
 opcao = int(input(f'Escolha: '))
 
+# Calcular e mostrar a soma de todos os elementos da matriz;
 
 if opcao == 1:
 
@@ -69,6 +44,7 @@ if opcao == 1:
 
     print(f'\nA soma de todos os elementos da matriz é: {soma_total}')
 
+# Calcular e mostrar o maior e o menor elemento da matriz, e também suas respectivas posições.
 
 if opcao == 2:
 
@@ -94,6 +70,7 @@ if opcao == 2:
     print(f'O menor elemento é: {matriz[menor_i][menor_j]}, na posição: [{menor_i}][{menor_j}]')
 
 
+# Procurar por um elemento na Matriz. Se encontrar, retornar a posição do mesmo. Caso exista mais de um elemento igual, mostrar as posições de todos.
 
 if opcao == 3:
     
@@ -112,6 +89,7 @@ if opcao == 3:
     if contador_elemento == 0:
         print('Elemento não encontrado')
 
+# Calcular e exibir a matriz transposta (Trocar linhas por colunas). Para a transposição da matriz, crie uma nova matriz e reorganize os elementos.
 
 matriz_transposta = []
 if opcao == 4:
@@ -129,6 +107,7 @@ if opcao == 4:
             print(f'{matriz[j] [i]}', end=" ")
         print()
 
+# Multiplicar a matriz por um fator escalar. 
 
 
 if opcao == 5:
@@ -137,6 +116,7 @@ if opcao == 5:
         for j in range(len(linha)):
             print(linha[j] * x, end=' ')
 
+# Multiplicação entre duas matrizes.
 
 if opcao == 6:
     matriz2 = []
