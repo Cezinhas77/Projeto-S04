@@ -13,7 +13,7 @@ for i in range(linhas):
 
 # Exibir a matriz formatada na tela (desing de matriz, linha x coluna).
 
-print('Matriz:')
+print('\nMatriz:')
 for linha in matriz:
     print(linha)
 
