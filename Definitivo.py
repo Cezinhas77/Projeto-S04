@@ -84,7 +84,6 @@ while True:
 
         contador_elemento = 0
         for i in range (linhas):
-            elementos = []
             for j in range (colunas):
                 if matriz[i][j] == elemento:
                     contador_elemento += 1
